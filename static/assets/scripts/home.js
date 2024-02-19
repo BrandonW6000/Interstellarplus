@@ -61,8 +61,10 @@ document.onkeydown = function (evt) {
 let splashtext = [
   'Over 7 Million Users in 2023!',
   'Fastest growing proxy server!',
-  'Made by Bubbo!',
-  'Check out discord.gg/interstellar :)',
+  'Made by Brandon!',
+  'This is the real version',
+  'Thank you for using Interstellar',
+  'Best proxy 2024 :)',
 ]
 
 document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
