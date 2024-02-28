@@ -61,7 +61,7 @@ document.onkeydown = function (evt) {
 }
 
 let splashtext = [
-  'Thanks For Donating!',
+  'InterPlanet back up!',
   'Fastest growing proxy server!',
 ]
 
