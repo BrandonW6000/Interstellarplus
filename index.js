@@ -43,12 +43,12 @@ if (config.routes !== false) {
   })
 }
 if (config.local !== false) {
-  app.get('/y/*', cors({ origin: false }), (req, res, next) => {
+  app.get('/y/*', (req, res, next) => {
     const baseUrl = 'https://raw.githubusercontent.com/ypxa/y/main'
     fetchData(req, res, next, baseUrl)
   })
 
-  app.get('/f/*', cors({ origin: false }), (req, res, next) => {
+  app.get('/f/*', (req, res, next) => {
     const baseUrl = 'https://raw.githubusercontent.com/4x-a/x/fixy'
     fetchData(req, res, next, baseUrl)
   })
@@ -70,7 +70,6 @@ const fetchData = async (req, res, next, baseUrl) => {
     next(error)
   }
 }
-
 server.on('request', (req, res) => {
   if (bareServer.shouldRoute(req)) {
     bareServer.routeRequest(req, res)
